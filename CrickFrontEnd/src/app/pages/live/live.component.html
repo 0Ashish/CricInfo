@@ -1,0 +1,16 @@
+<div class=" ">
+ <h1 class="text-4xl font-extrabold text-gray-800 px-2"> Live Scores </h1>
+  <div class="items-stretch card-container flex-wrap flex-col md:flex-row flex">
+
+ @for (match of livematches; track $index) {
+
+    <div class="p-2 md:w-[25%] w-full ">
+        <app-match-card [match]="match"> </app-match-card>
+    </div>
+    
+ }  
+ @empty {
+    there is no live matches 
+ }
+</div>
+</div>
